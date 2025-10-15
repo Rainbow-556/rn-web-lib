@@ -1,0 +1,41 @@
+{
+  "name": "rn-web-lib",
+  "version": "1.0.0",
+  "description": "rn-web-lib",
+  "type": "module",
+  "private": false,
+  "main": "./dist/web/index.js",
+  "module": "./dist/web/index.js",
+  "react-native": "./dist/rn/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "vite",
+    "build": "pnpm clean && pnpm build:web && pnpm build:rn",
+    "build:web": "vite build --config vite.config.web.ts",
+    "build:rn": "vite build --config vite.config.rn.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.77"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "18.3.24",
+    "@types/react-native": "0.73.0",
+    "react": "18.3.1",
+    "react-native": "0.77.3",
+    "typescript": "5.9.2",
+    "vite": "6.3.6",
+    "vite-plugin-dts": "4.5.4"
+  }
+}
